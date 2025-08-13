@@ -252,6 +252,14 @@ body.light-mode .logo-noite {
     footer {
         padding: 50px 20px;
     }
+
+.social-links {
+    flex-wrap: wrap;          /* <<< ADICIONE ESTA LINHA */
+    justify-content: flex-end; /* Alinha os itens à direita */
+    gap: 15px;                /* Espaçamento um pouco menor para mobile */
+}
+
+/* Restante do seu código responsivo... */
 }
 
 
