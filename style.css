@@ -88,6 +88,14 @@ h1, h2, h3, h4 {
 .social-links a { color: var(--text-headings); font-size: 28px; transition: color 0.3s ease, transform 0.3s ease; }
 .social-links a:hover { color: var(--accent-primary); transform: scale(1.2); }
 
+/* Adiciona estilo para o detalhe do preço 'sobre os ganhos líquidos' */
+.plan .price span .price-note {
+    font-size: 0.9em;  /* Deixa a fonte um pouco menor que a do IVA */
+    color: var(--text-subtle);
+    display: inline-block; /* Garante que o espaçamento funcione bem */
+    margin-top: 4px; /* Cria um pequeno espaço abaixo do texto do IVA */
+}
+
 /* Botão de Tema */
 .theme-btn {
     background: none;
@@ -137,6 +145,7 @@ main section {
 main section h2 { font-size: 2.8em; margin-bottom: 30px; }
 
 /* Planos */
+
 .pricing { background-color: var(--bg-secondary); transition: background-color 0.3s ease; }
 .plan-container { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-top: 20px; }
 .plan {
@@ -149,8 +158,17 @@ main section h2 { font-size: 2.8em; margin-bottom: 30px; }
     transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 .plan h3 { font-size: 1.8em; }
-.plan .price { font-size: 2.8em; font-weight: bold; color: var(--accent-primary); }
-.plan .price span { font-size: 0.5em; font-weight: normal; color: var(--text-subtle); }
+.plan .price { margin: 0; font-size: 2.8em; font-weight: bold; color: var(--accent-primary); }
+.plan .price span { 
+    font-size: 0.23em; /* <<< ALTERE AQUI para deixar a fonte bem pequena */
+    font-weight: normal; 
+    color: var(--text-subtle); 
+}
+.paragrafoP{
+    margin-top: 0;
+    font-size: 0.8em;
+    color: #888;
+}
 .plan ul { list-style: none; padding: 0; margin: 25px 0; text-align: left; }
 .plan ul li { margin-bottom: 12px; }
 
