@@ -57,8 +57,13 @@ h1, h2, h3, h4 {
 .top-bar {
     background-color: var(--bg-header);
     color: var(--text-headings);
-    padding: 20px 40px;
+    padding: 5px 40px;
     transition: background-color 0.3s ease, color 0.3s ease;
+
+    /* --- CÓDIGO PARA FIXAR NO TOPO --- */
+    position: sticky; /* Faz o elemento "colar" na tela */
+    top: 0;           /* Define que ele vai colar no topo (posição 0) */
+    z-index: 1000;    /* Garante que ele fique na frente de todo o outro conteúdo */
 }
 
 .top-bar-content, .profile-info, .social-links {
@@ -72,8 +77,8 @@ h1, h2, h3, h4 {
 }
 .profile-info { gap: 20px; }
 .profile-pic {
-    width: 125px;
-    height: 125px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -199,12 +204,12 @@ body.light-mode .logo-noite {
     }
 
     .top-bar {
-        padding: 20px; /* Diminui o espaçamento lateral */
+        padding: 10px; /* Diminui o espaçamento lateral */
     }
 
     .profile-pic {
-        width: 100px;  /* Diminui o tamanho da logo em telas menores */
-        height: 100px;
+        width: 160px;  /* Diminui o tamanho da logo em telas menores */
+        height: 160px;
     }
 
 
@@ -247,4 +252,102 @@ body.light-mode .logo-noite {
     footer {
         padding: 50px 20px;
     }
+}
+
+
+/* auth.css - Estilos para as páginas de Login e Cadastro */
+
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.auth-box {
+    background-color: var(--bg-secondary);
+    padding: 40px;
+    border-radius: 10px;
+    border: 1px solid var(--card-border-color);
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.auth-box h1 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 2.2em;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-size: 1em;
+    box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--accent-primary);
+}
+
+/* Faz o botão ocupar 100% da largura do formulário */
+.auth-box .cta-button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.auth-links {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.auth-links a {
+    color: var(--accent-primary);
+    text-decoration: none;
+    display: block;
+    margin-top: 15px;
+    font-size: 0.9em;
+}
+
+.auth-links a.home-link {
+    color: var(--text-subtle);
+    margin-top: 20px;
+}
+
+.auth-links a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para os links de Login/Cadastro na barra superior */
+.auth-nav-link {
+    color: var(--text-headings);
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 600;
+    margin: 0 5px; /* dá um respiro entre os links */
+}
+
+.auth-nav-link:hover {
+    color: var(--accent-primary);
 }
