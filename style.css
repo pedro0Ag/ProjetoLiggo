@@ -208,59 +208,79 @@ body.light-mode .logo-noite {
     display: none;  /* E a logo da noite se esconde */
 }
 
-/* =================================================================== */
-/* === CÓDIGO DE RESPONSIVIDADE (Para Celulares e Tablets) === */
-/* =================================================================== */
 
-/* Todas as regras abaixo só serão aplicadas em telas com largura máxima de 768px */
+/* CÓDIGO DE RESPONSIVIDADE  */
+
 @media (max-width: 768px) {
 
-    /* 1. Ajusta a barra do topo para empilhar os elementos */
+    
     .top-bar-content {
-        flex-direction: column; /* Empilha a foto/nome e as redes sociais */
-        gap: 20px;
+        flex-direction: column;
+        gap: 15px; 
     }
 
     .top-bar {
-        padding: 10px; /* Diminui o espaçamento lateral */
+        padding: 15px 10px; 
+    }
+    
+    .profile-info {
+       justify-content: center;
     }
 
     .profile-pic {
-        width: 160px;  /* Diminui o tamanho da logo em telas menores */
-        height: 160px;
+        width: 140px; 
+        height: 140px;
     }
 
-
-    /* 2. Diminui o tamanho das fontes principais para caber melhor na tela */
+    
     .hero h1 {
-        font-size: 2.5em; /* Era 3.5em */
+        font-size: 2.5em; 
     }
 
     .hero p {
-        font-size: 1.1em; /* Era 1.3em */
+        font-size: 1.1em; 
     }
 
     main section h2 {
-        font-size: 2.2em; /* Era 2.8em */
+        font-size: 2.2em; /
+    }
+    
+   
+    .social-links {
+        flex-wrap: wrap;
+        justify-content: center; 
+        gap: 12px; 
+        margin: 0;
+    }
+    
+    .social-links a {
+        font-size: 24px; 
     }
 
+    .auth-nav-link {
+        font-size: 1em; 
+        margin: 0;
+    }
 
-    /* 3. Empilha os cartões de plano para que não fiquem espremidos */
+    .theme-btn {
+        font-size: 24px; 
+    }
+
+    
     .plan-container {
-        flex-direction: column; /* Empilha os planos um embaixo do outro */
-        align-items: center; /* Centraliza os planos empilhados */
+        flex-direction: column; 
+        align-items: center; 
         gap: 30px;
     }
 
     .plan {
-        width: 90%; /* Faz o plano ocupar mais da largura disponível */
-        max-width: 350px; /* Limita para não ficar largo demais */
+        width: 90%; 
+        max-width: 350px; 
     }
     
-
-    /* 4. Ajusta espaçamentos gerais para uma visualização mais compacta */
+    
     .hero {
-        padding: 80px 20px; /* Menos espaçamento vertical */
+        padding: 80px 20px; 
     }
 
     main section {
@@ -270,18 +290,10 @@ body.light-mode .logo-noite {
     footer {
         padding: 50px 20px;
     }
-
-.social-links {
-    flex-wrap: wrap;          /* <<< ADICIONE ESTA LINHA */
-    justify-content: flex-end; /* Alinha os itens à direita */
-    gap: 15px;                /* Espaçamento um pouco menor para mobile */
-}
-
-/* Restante do seu código responsivo... */
 }
 
 
-/* auth.css - Estilos para as páginas de Login e Cadastro */
+/*Estilos para as páginas de Login e Cadastro */
 
 .auth-container {
     display: flex;
@@ -371,7 +383,7 @@ body.light-mode .logo-noite {
     text-decoration: none;
     font-size: 1em;
     font-weight: 600;
-    margin: 0 5px; /* dá um respiro entre os links */
+    margin: 0 5px; 
 }
 
 .auth-nav-link:hover {
